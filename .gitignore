@@ -1,0 +1,25 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+
+npm-debug.log*
+
+# VSTool
+/.vscode
+.prettierrc
+
+# lock file
+package-lock.json
+
+# bash
+bash.sh
