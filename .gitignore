@@ -8,6 +8,7 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -17,9 +18,6 @@ npm-debug.log*
 # VSTool
 /.vscode
 .prettierrc
-
-# lock file
-package-lock.json
 
 # bash
 bash.sh

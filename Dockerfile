@@ -12,6 +12,7 @@
 
 FROM node:12 AS build
 WORKDIR /usr/src/app
+COPY package-lock.json ./
 COPY package.json ./
 COPY babel.config.json ./
 RUN npm install
@@ -21,8 +22,11 @@ RUN npm run build
 
 FROM node:12 AS server
 WORKDIR /root/
-COPY --from=build /usr/src/app .
+COPY package-lock.json ./
+COPY package.json ./
+RUN npm install --prod
+COPY --from=build /usr/src/app/dist ./dist
 
 EXPOSE 4200
 
-RUN npm run start
+CMD ["npm", "run", "start"]
