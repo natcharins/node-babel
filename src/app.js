@@ -6,7 +6,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("ekapon@moj.go.th");
 });
 
 const PORT = process.env.PORT || 4200;
